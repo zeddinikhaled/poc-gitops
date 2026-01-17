@@ -2,8 +2,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 helmCharts:
-  - name: nginx-app
-    path: ../../../nginx-app
+  - name: nginx
+    chartPath: ../../../nginx-app
     releaseName: nginx
-    valuesFile: helm-values.yaml
-
+    valuesFile: values.yaml
